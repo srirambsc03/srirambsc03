@@ -1,0 +1,243 @@
+:root {
+    /* color */
+    --color: white;
+    --color: gray;
+    --color: blue;
+    --color: lightblue;
+
+    /* radia */
+    --border-radius : 0.7rem;  
+    /* size */
+    --max-width: 758px;
+    --max-height: 420px;
+
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+body {
+    align-items: center;
+    background-color: var(rgb(238, 245, 230)); 
+    background-image: url(imgg1.jpg);
+    /*background: url("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg");
+  
+    background: url("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558px/Codepen/waldemar-brandt-aTheSgxOYM-unsplash_cnq4sp.jpg");
+                   ("https://res.cloudinary.com/dci1eujqw/image/upload/v1616769558px/Codepen/waldemar-brandt-aTheSgxOYM-unsplash_cnq4sp.jpg");
+                    */
+                    background-attachment: fixed;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size:cover;
+                    display: grid;
+                    height: 100vh;
+                    place-items: center;
+}
+.form-title > inpute{
+    font-weight: 30px;
+    margin: 0;
+    margin-bottom: 1.25rem;
+    width: 100;
+}
+from
+.link{
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+    text-decoration: none;
+}
+.container{
+    background-color: var(--white);
+    border-radius: var(button-radius);
+    box-shadow: 0 0.9rem 1.7rem rgba(202, 32, 32, 0.25),
+    0 0.7rem 0.rem rgba(0, 0, 0, 0.22);
+    height: var(max-height);
+    position:absolute;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-between;
+}
+.container__form{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.6s ease-in-out;
+}
+.container--signin{
+    left: 0;
+    width: 50%;
+    z-index: 50%;
+
+}
+/*align center the signin  container.right-panel-active */
+.container--signin {
+    transform: translateX(100%);
+}
+.container--signup{
+    left: 0;
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 5;
+
+}
+.container__overlay{
+    height: 100%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: transform 0.6s ease-in-out;
+    width: 50%;
+    z-index: 100;
+}
+/* .container.right-panel-active */
+.container__overlay{
+    transform: translateX(-100%);
+}
+.overlay{
+    background-color: var(lightblue);
+    background-image: url(imgg1.jpg); /*
+    background: url("https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg");
+     */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100%;
+    left: -100%;
+    position: relative;
+    transition: relative;
+    transform: translateX(0);
+    transition: tranform 0.6s ease-in-out;
+    width: 200%;
+}
+.container .overlay{
+    transform: translateX(50%);
+}
+.overlay__panel{
+    align-items: center;
+    display: fixed;
+    flex-direction: column;
+    height: 100%;
+    justify-content:center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    transform: translateX(0%);
+    transition:transform o.6s ease-in-out;
+    width: 50%;
+
+}
+.overlay--left{
+    transform: translateX(-20%);
+}
+.container .overlay--left{
+    transform: translateX(0);
+}
+.overlay--right{
+    right: 0;
+    transform: translateX(0);
+
+}
+.container .overlay--right{
+    transform: translateX(20%);
+}
+.btn{
+    background-color: var(blue);
+    background-image: linear-gradient(90deg, var(blue)
+    0%, var(rgb(55, 173, 212))74%);
+    border-radius: 20px;
+    border:1px solid var(blue);
+    color: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 0.9rem 4rem;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.form > .btn{
+    margin-top: 1.5rem;
+}
+.btn:active{
+    transform:scale(0.95);
+}
+.btn:focus{
+    outline: none;
+}
+.form{
+    background-color: var(rgb(29, 116, 216));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    height: 100%;
+    text-align: center;
+}
+.input{
+    background-color: #c73434;
+    border:none;
+    padding:0.9rem 0.9rem;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+@keyframes show{
+    0%,
+    49.99%{
+        opacity:0;
+        z-index:1;
+    }
+    50%,
+    100%{
+        opacity: 1;
+        z-index: 5;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+<div class ="container">
+<div class = "text"> log in to continue </div>
+<div class = "page">
+    <div class="title"> instagram</div>
+<from>
+    <input type="text" placeholder="phone number , username , or email"><br>
+<input type="password" placeholder="password"> <br>
+<button>log in</button>
+<div class = "opitons"> OR </div>
+<script>
+function emp (id , name , salary)
+{
+this.id = id ;
+this.name = name ;
+this.salary = salary;
+
+}
+e= new emp (103, "vimal", 3000);
+document.write ( "<br>" ,e.id ," ", + e.name +" " + e.salary);
+*/
+
+
+
+
+
+
+
+
